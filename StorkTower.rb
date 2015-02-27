@@ -1,0 +1,18 @@
+require 'twitter'
+
+client = Twitter::REST::Client.new do |config|
+  config.consumer_key        = "BvrlDf78bXjEBjNcB7Bj4bQg7"
+  config.consumer_secret     = "iyxyHXk628rRf44dc3O8Q7K0psipgsKX3RcBkRzLhlIh3sTcTx"
+  config.access_token        = "3047831041-nRAFKXq3WrhNxhRiAfpxgg82aMogMlx2UzmgTPO"
+  config.access_token_secret = "kLpHRgFrKeCcEiZY6gn37mukVbwojabl3GTQTQYTjstIv"
+end
+
+while true 
+	if Time.now.min == 0
+		post = "Bong "*Time.now.hour
+		client.update(post[0..-1])
+		sleep(70)
+	end
+
+end 
+
