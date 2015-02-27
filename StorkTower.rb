@@ -9,9 +9,10 @@ end
 
 while true 
 	if Time.now.min == 0
-		post = "Bong "*Time.now.hour
+		post = "Bong "*Time.now.hour % 12
 		client.update(post[0..-1])
-		sleep(70)
+		puts "Success"
+		sleep()
 	end
 
 end 
