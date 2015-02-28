@@ -1,4 +1,5 @@
 require 'twitter'
+require 'secrets.rb'
 
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = "BZS8BjEalujmapspfphoSu0x9"
@@ -11,7 +12,7 @@ end
 hashTags = ['#HarryPotterThemeSong',
       '#HungerGamesSoundtrack',
       '#DisneyMusic',
-      '#ChistmasMusic'] 
+      '#ChistmasMusic']
 
 while true 
   t = Time.now
