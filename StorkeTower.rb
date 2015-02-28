@@ -1,11 +1,11 @@
 require 'twitter'
-require 'secrets.rb'
+require './secrets.rb'
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key        = "BZS8BjEalujmapspfphoSu0x9"
-  config.consumer_secret     = "AzgC5UBGYjogHdJJFlETjr4Q2Xb7vJVt9MldkQ46ZVkpvk1Z0f"
-  config.access_token        = "3047831041-nRAFKXq3WrhNxhRiAfpxgg82aMogMlx2UzmgTPO"
-  config.access_token_secret = "kLpHRgFrKeCcEiZY6gn37mukVbwojabl3GTQTQYTjstIv"
+  config.consumer_key        = $key1
+  config.consumer_secret     = $key2
+  config.access_token        = $key3
+  config.access_token_secret = $key4
 end
 
 
