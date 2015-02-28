@@ -12,7 +12,7 @@ while true
     post = "BONG " * current_hour
     client.update(post[0..-1])
     puts "Posted BONG to Twitter #{current_hour} times at #{t.strftime('%r')}" 
-    sleep(70)
+    sleep(70) 
   elsif t.sunday? and t.hour == 11 and t.min == 30
     current_song = hashTags[rand(0...songs.length)]
     client.update(current_song)
