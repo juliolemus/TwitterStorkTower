@@ -1,4 +1,4 @@
-load 'secrets.rb'
+require 'secrets'
 
 hashTags = ['#HarryPotterThemeSong',
       '#HungerGamesSoundtrack',
