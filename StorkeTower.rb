@@ -3,7 +3,7 @@ load 'secrets.rb'
 hashTags = ['#HarryPotterThemeSong',
       '#HungerGamesSoundtrack',
       '#DisneyMusic',
-      '#ChistmasMusic']
+      '#ChistmasMusic'] 
 
 while true 
   t = Time.now
