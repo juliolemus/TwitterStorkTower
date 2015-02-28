@@ -18,8 +18,8 @@ while true
   t = Time.now
   if t.min == 9
     current_hour = t.hour % 12
-    #post = "BONG " * current_hour, post[0..-1]
-    client.update("BONG " * current_hour)
+    post = "BONG " * current_hour
+    client.update(post[0...-1])
     puts "Posted BONG to Twitter #{current_hour} times at #{t.strftime('%r')}" 
     sleep(100) 
   elsif t.sunday? and t.hour == 11 and t.min == 30
