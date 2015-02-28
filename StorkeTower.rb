@@ -16,12 +16,12 @@ hashTags = ['#HarryPotterThemeSong',
 
 while true 
   t = Time.now
-  if t.min == 0
+  if t.min == 9
     current_hour = t.hour % 12
     #post = "BONG " * current_hour, post[0..-1]
     client.update("BONG " * current_hour)
     puts "Posted BONG to Twitter #{current_hour} times at #{t.strftime('%r')}" 
-    sleep(70) 
+    sleep(100) 
   elsif t.sunday? and t.hour == 11 and t.min == 30
     current_song = hashTags[rand(0...songs.length)]
     client.update(current_song)
