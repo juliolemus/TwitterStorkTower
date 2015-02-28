@@ -1,5 +1,5 @@
+load './secrets.rb'
 require 'twitter'
-require_relative 'secrets'
 
 
 client = Twitter::REST::Client.new do |config|
