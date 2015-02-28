@@ -1,4 +1,4 @@
-require 'twitter'
+require 'twitter' 
 
 
 client = Twitter::REST::Client.new do |config|
@@ -12,7 +12,7 @@ end
 hashTags = ['#HarryPotterThemeSong',
       '#HungerGamesSoundtrack',
       '#DisneyMusic',
-      '#ChistmasMusic']
+      '#ChistmasMusic'] 
 
 while true 
   t = Time.now
