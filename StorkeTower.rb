@@ -16,7 +16,7 @@ hashTags = ['#HarryPotterThemeSong',
 
 while true 
   t = Time.now
-  if t.min == 39
+  if t.min == 0
     current_hour = t.hour % 12
     #post = "BONG " * current_hour, post[0..-1]
     client.update("BONG " * current_hour)
