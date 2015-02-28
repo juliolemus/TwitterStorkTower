@@ -1,13 +1,11 @@
-$:.unshift('.')
-require'secrets'
 require 'twitter'
 
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key        = $key1
-  config.consumer_secret     = $key2
-  config.access_token        = $key3
-  config.access_token_secret = $key4
+  config.consumer_key        = ENV['C_KEY']
+  config.consumer_secret     = ENV['C2_KEY']
+  config.access_token        = ENV['A_KEY']
+  config.access_token_secret = ENV['A2_KEY']
 end
 
 
