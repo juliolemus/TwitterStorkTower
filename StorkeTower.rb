@@ -1,5 +1,6 @@
 require 'twitter'
-require './secrets.rb'
+require_relative 'secrets'
+
 
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = $key1
