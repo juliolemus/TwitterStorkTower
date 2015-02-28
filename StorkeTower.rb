@@ -1,9 +1,10 @@
-require 'secrets.rb'
+load 'secrets.rb'
 
 hashTags = ['#HarryPotterThemeSong',
       '#HungerGamesSoundtrack',
       '#DisneyMusic',
       '#ChistmasMusic']
+
 while true 
   t = Time.now
   if t.min == 0
