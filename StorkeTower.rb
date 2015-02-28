@@ -1,4 +1,5 @@
-load './secrets.rb'
+$:.unshift('.')
+require'secrets'
 require 'twitter'
 
 
