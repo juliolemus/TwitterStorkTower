@@ -1,4 +1,5 @@
 require 'twitter' 
+require 'active_support/time'
 
 
 client = Twitter::REST::Client.new do |config|
@@ -14,15 +15,16 @@ hashTags = ['#HarryPotterThemeSong',
       '#DisneyMusic',
       '#ChistmasMusic'] 
 
-current_time = Time.now
+Time.zone='Pacific Time (US & Canada)'
+current_time = Time.zone.now
 if current_time.sunday?
-  end_time = current_time+30
+  end_time = current_time.min+1650
 else
-  end_time = current_time + 10
+  end_time = current_time+current_time.min+550
 end
 
 while current_time != end_time
-  t = Time.now
+  t = Time.zone.now
 
   if t.min == 0 && !t.sunday?
     current_hour = t.hour % 12
