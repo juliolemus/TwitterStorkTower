@@ -17,6 +17,7 @@ hashTags = ['#HarryPotterThemeSong',
 
 Time.zone='Pacific Time (US & Canada)'
 current_time = Time.zone.now
+
 if current_time.sunday?
   end_time = current_time.min+1650
 else
@@ -26,7 +27,7 @@ end
 while current_time != end_time
   t = Time.zone.now
 
-  if t.min == 0 && !t.sunday?
+  if t.min == 6 && !t.sunday?
     current_hour = t.hour % 12
     post = "BONG " * current_hour
     client.update(post[0...-1])
