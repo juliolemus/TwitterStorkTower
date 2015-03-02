@@ -19,6 +19,7 @@ if current_time.sunday?
   end_time = current_time+30
 else
   end_time = current_time + 10
+end
 
 while current_time != end_time
   t = Time.now
