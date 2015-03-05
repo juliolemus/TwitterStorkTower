@@ -1,6 +1,4 @@
-require 'twitter' 
-require 'active_support/time'
-
+require 'twitter'
 
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = ENV['C_KEY']
@@ -15,21 +13,21 @@ hashTags = ['#HarryPotterThemeSong',
       '#DisneyMusic',
       '#ChistmasMusic'] 
 
-Time.zone='Pacific Time (US & Canada)'
-current_time = Time.zone.now
+current_time = Time.now
 
 if current_time.sunday?
-  end_time = current_time.min+1650
+  end_time = current_time.min+1800
 else
-  end_time = current_time+current_time.min+550
+  end_time = current_time+current_time.min+600
 end
 
 while current_time != end_time
-  t = Time.zone.now
+  t = Time.now
 
-  if t.min == 6 && !t.sunday?
+  if t.min == 0 && !t.sunday?
     current_hour = t.hour % 12
     post = "BONG " * current_hour
+    puts post
     client.update(post[0...-1])
     puts "Posted BONG to Twitter #{current_hour} times at #{t.strftime('%r')}" 
     sleep(70) 
